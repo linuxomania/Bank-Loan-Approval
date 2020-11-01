@@ -1,0 +1,87 @@
+{%load static%}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="static/style.css">
+        <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+        <title>BankLoanPrediction</title>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="container">
+            <h1 style="color:#990202">Bank Loan Prediction</h1>
+            <br>
+            <h3 style="color:#02064f">Please select from the below options to predict the bank loan approval status of the appication</h3>
+            <br>
+        </div>
+        <div id="container" class="container">
+       <form method="POST">{%csrf_token%}
+        
+        <select id="Gender" name="Gender" required>
+            <option value="">Gender</option>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select><br>
+        <br>
+        <select id= "Married" name="Married" required>
+            <option value="">Marital Status</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br>
+        <br>
+        <select id="Dependents" name="Dependents" required>
+            <option value="">Dependents</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select><br>
+        <br>
+        <select id="Education" name="Education" required>
+            <option value="">Education</option>
+            <option value="0">Graduate</option>
+            <option value="1">Not Graduate</option>
+        </select><br>
+        <br>
+        <select id="Self_Employed" name="Self_Employed" required>
+            <option value="">Self_Employed</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br>
+        <br>
+                <input type="number" name="ApplicantIncome" step="any" required value=""placeholder="Applicant Income" min="5" max="12"><br><br>
+                <input type="number" name="LoanAmount" step="any" required value=""placeholder="Loan Amount" min="2" max="7"><br><br>
+                <input type="number" name="Loan_Amount_Term" step="any" required value=""placeholder="Loan Amount Term" min="2" max="7"><br><br>
+                <select name="Credit History" id="Credit_History">
+                    <option value="">Credit_History</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select><br>
+                <br>
+                <select name="Property Area" id="Property_Area" required>
+                    <option value="">Residence</option>
+                    <option value="0">Rural</option>
+                    <option value="1">Semi_Urban</option>
+                    <option value="2">Urban</option>
+                </select><br>
+                <br>    
+        <input type="Submit" name="Submit" value="Submit">
+       
+        </form> 
+        <br>
+        {% if d%}
+        {%else%}
+        <label form="Loan_approved_status">Loan approval status for given inputs :</label>
+        <input type="text" name="" value="{{ans}}" disabled>
+        {%endif%}    
+    </div>
+        <script src="" async defer></script>
+    </body>
+</html>
