@@ -13,3 +13,13 @@ We have the loan application information like the applicant's name, personal det
 ### Technologies Used - 
 1. Deployment: Django, HTML, CSS
 2. Python libraries: pandas, numpy, matplotlib, seaborn
+
+### Project Preview -
+![preview](https://user-images.githubusercontent.com/59911307/97886020-1b715980-1d4e-11eb-8419-2985ca4d1443.jpg)
+
+### Inputting the values -
+![value inputs](https://user-images.githubusercontent.com/59911307/97886004-17453c00-1d4e-11eb-82ae-4f1362057502.jpg)
+
+### Getting the loan approval status -
+![predicted output](https://user-images.githubusercontent.com/59911307/97886030-1e6c4a00-1d4e-11eb-9578-ed4ce27e33b3.jpg)
+
